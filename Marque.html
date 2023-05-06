@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<htm lang="eng">
+    <head>
+        <title>HTML Marque Tag</title>
+        <style>
+        #mark{
+            font-size: 25px;
+            color:red;
+            }
+        #stop{
+            margin: auto;
+            height: 40px;
+            width:200px;
+            background-color:blue;
+            color:orange;
+            display: block;
+            cursor: pointer;
+        }
+        #start{
+            margin: auto;
+            height: 40px;
+            width:200px;
+            background-color: black;
+            color:white;
+            display: block;
+            cursor: pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <marquee id="mark">Hi Muzamil</marquee>
+        <button id="stop" value="stop">Stop</button>
+        <button id="start" value="start">Start</button>
+
+        <script>
+        let Go = document.getElementById("mark");
+        let stop = document.getElementById("stop");
+        let start = document.getElementById("start");
+
+        stop.onclick=stopMark;
+        start.onclick=startMark;
+
+        function stopMark(){Go.stop();}
+        function startMark(){Go.start();}
+        </script>
+    </body>
+</htm>
